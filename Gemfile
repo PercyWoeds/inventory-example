@@ -57,6 +57,7 @@ group :development, :test do
   gem 'byebug'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'fuubar', '~> 2.0.0.rc1'
   gem 'jasmine', '> 2.0'
   gem 'jasmine-jquery-rails'
