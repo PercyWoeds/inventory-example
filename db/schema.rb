@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511163647) do
+ActiveRecord::Schema.define(version: 20150511164651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,24 @@ ActiveRecord::Schema.define(version: 20150511163647) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "units", force: true do |t|
+    t.string   "unit_type"
+    t.integer  "inv_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "user_id"
+    t.integer  "location_id"
+    t.boolean  "on_depot",          default: false
+    t.boolean  "out_of_order",      default: false
+    t.text     "out_of_order_note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "units", ["inv_id"], name: "index_units_on_inv_id", using: :btree
+  add_index "units", ["location_id"], name: "index_units_on_location_id", using: :btree
+  add_index "units", ["user_id"], name: "index_units_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

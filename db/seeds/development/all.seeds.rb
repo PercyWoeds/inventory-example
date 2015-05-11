@@ -1,3 +1,6 @@
-FactoryGirl.create(:user, :confirmed)
-FactoryGirl.create_list(:location, 5)
+user = FactoryGirl.create(:user, :confirmed)
+location = FactoryGirl.create(:location)
+units = FactoryGirl.create_list(:unit, 5, user: user, location: location)
+
+
 

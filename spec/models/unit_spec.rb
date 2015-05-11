@@ -1,4 +1,4 @@
 require 'rails_helper'
 
-RSpec.describe Location do
+RSpec.describe Unit do
 end
