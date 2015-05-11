@@ -1,0 +1,2 @@
+class UnitsPresenter < ApplicationPresenter
+end
