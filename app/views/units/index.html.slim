@@ -1,7 +1,15 @@
-table
-  thead
-    tr
-      th Name
-  tbody
-    = render(units)
+/ = units.inspect
+.row
+  .columns
+    h2 = title
 
+.row
+  .medium-6.columns
+    table
+      thead
+        tr
+          th Type
+          th Location
+          th Name
+      tbody
+        = render(units)

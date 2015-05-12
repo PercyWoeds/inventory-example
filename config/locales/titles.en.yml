@@ -3,6 +3,8 @@ en:
     application: Rails Base example site
     pages:
       home: Home
+    units:
+      index: List units
     devise:
       registrations:
         new: Sign up

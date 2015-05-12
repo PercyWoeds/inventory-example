@@ -10,6 +10,9 @@ feature 'Lists units.' do
 
   scenario 'User list units' do
     visit(units_path)
+
     expect(page).to have_content(unit.name)
+    expect(page).to have_content(unit.unit_type)
+    expect(page).to have_content(unit.location_name)
   end
 end

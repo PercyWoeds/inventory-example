@@ -1,2 +1,3 @@
-class UnitsPresenter < ApplicationPresenter
+class UnitsPresenter < CollectionPresenter
+  self.presenter = UnitPresenter
 end
