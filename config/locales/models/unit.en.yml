@@ -1,0 +1,17 @@
+en:
+  enumerize:
+    unit:
+      unit_type:
+        box: Desktop
+        display: Monitor
+
+  simple_form:
+    labels:
+      unit:
+        unit_type: Type
+
+  helpers:
+    submit:
+      unit:
+        create: 'Create Unit'
+        update: 'Update Unit'

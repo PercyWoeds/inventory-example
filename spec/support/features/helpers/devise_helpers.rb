@@ -1,8 +1,6 @@
 module DeviseHelpers
   def sign_in(email, password)
-    visit new_user_session_path
-
-    click_link 'Sign in'
+    visit(new_user_session_path)
 
     fill_form(
       :user,

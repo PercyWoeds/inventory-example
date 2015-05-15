@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 feature 'Update account with valid data' do
-  let(:user) { create :user, :confirmed }
+  include_examples 'current_user signed in'
 
   before(:each) do
-    sign_in(user.email, '123456')
-    visit edit_user_registration_path(user)
+    visit(edit_user_registration_path(current_user))
   end
 
   scenario 'I submit update account form with valid data' do

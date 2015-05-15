@@ -1,7 +1,19 @@
 en:
-  active_record:
-    models:
+  simple_form:
+    labels:
       user:
-    attributes:
+        new:
+          email: Enter your email address
+        edit:
+          password: Enter new password
+          password_confirmation: Confirm your new password
+    hints:
       user:
-        full_name:
+        password: Leave it blank if you dont want to change it
+        current_password: We need your current password to confirm your changes
+
+  helpers:
+    submit:
+      user:
+        create: 'Sign up'
+        update: 'Update'

@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # views
 gem 'active_link_to'
+gem 'reform'
 gem 'simple_form', '~> 3.0.2'
 gem 'slim'
 gem 'title'
@@ -26,6 +27,7 @@ gem 'title'
 gem 'decent_decoration'
 gem 'decent_exposure'
 gem 'devise'
+gem 'enumerize'
 gem 'interactor'
 gem 'kaminari'
 gem 'pundit'
@@ -65,6 +67,8 @@ group :development, :test do
   gem 'rails_best_practices'
   gem 'rspec-rails', '~> 3.0'
   gem 'rubocop'
+  gem 'spring'
+  gem 'spring-commands-rspec'
 end
 
 group :development do

@@ -1,3 +1,2 @@
-class UnitsPresenter < CollectionPresenter
-  self.presenter = UnitPresenter
+class UnitsPresenter < BaseCollectionPresenter
 end

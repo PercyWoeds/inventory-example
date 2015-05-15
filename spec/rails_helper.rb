@@ -19,8 +19,7 @@ RSpec.configure do |config|
   config.include EmailSpec::Matchers
   config.include FactoryGirl::Syntax::Methods
 
-  config.include Formulaic::Dsl, type: :feature
-  config.include DeviseHelpers, type: :feature
+  config.include FeatureHelpers, type: :feature
 
   config.before do
     ActionMailer::Base.deliveries.clear

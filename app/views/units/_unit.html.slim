@@ -4,4 +4,8 @@ tr
   td
     = unit.location_name
   td
-    = unit.name
+    = unit.user_full_name
+  td
+    = link_to(unit.name, [:edit, unit])
+  td
+    = link_to('Delete', unit, data: { confirm: 'Are you sure?' }, method: :delete)

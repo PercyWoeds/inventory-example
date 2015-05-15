@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 feature 'Sign out' do
-  let(:user) { create :user, :confirmed }
-
-  before(:each) do
-    sign_in(user.email, '123456')
-  end
+  include_examples 'current_user signed in'
 
   scenario 'Logged in user signs out' do
     click_link 'Sign out'
