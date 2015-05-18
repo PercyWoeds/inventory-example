@@ -4,7 +4,7 @@ class Unit < ActiveRecord::Base
   belongs_to :location
   belongs_to :user
 
-  enumerize :unit_type, in: [ :box, :display ]
+  enumerize :unit_type, in: %i(box display)
 
   validates :inv_id, presence: true, uniqueness: true, numericality: true
   validates :name, :unit_type, :location, :user, presence: true
