@@ -13,7 +13,7 @@
           th Name
           th Tools
       tbody
-        = render(units)
+        = render(units_list)
 
-    = paginate(units)
+    = paginate(units_list)
     = link_to('New unit', new_unit_path, class: 'button')
