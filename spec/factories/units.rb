@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :unit do
     sequence :inv_id
 
-    unit_type { UnitForm.new(Unit.new).unit_types_options.to_h.values.sample }
+    unit_type :box
     name { Faker::Lorem.sentence }
     description { Faker::Hacker.say_something_smart }
 

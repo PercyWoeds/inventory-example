@@ -9,7 +9,7 @@ feature 'Create unit.' do
     attributes_for(:unit)
       .slice(:inv_id, :name, :description)
       .merge(
-        unit_type: UnitForm.new(Unit.new).unit_types_options.to_h.keys.sample,
+        unit_type: 'Desktop',
         user: current_user.full_name,
         location: location.name
       )

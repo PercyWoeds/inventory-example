@@ -4,10 +4,8 @@ class UnitsController < ApplicationController
   responders :collection
   respond_to :html
 
+  expose_decorated(:units_list, decorator: UnitsPresenter) { Unit.list(params[:page]) }
   expose_decorated(:unit, attributes: :unit_params, decorator: UnitPresenter)
-  expose_decorated(:units, decorator: UnitsPresenter) { Unit.list(params[:page]) }
-
-  expose(:unit_form) { UnitForm.new(unit) }
 
   def index
   end
@@ -24,7 +22,7 @@ class UnitsController < ApplicationController
   end
 
   def update
-    unit.save if unit_form.valid?
+    unit.save
     respond_with(unit)
   end
 

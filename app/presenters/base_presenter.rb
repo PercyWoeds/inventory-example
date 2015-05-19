@@ -1,12 +1,12 @@
 class BasePresenter
-  attr_reader :record
-  private :record
+  attr_reader :model
+  private :model
 
   # active_model
   delegate :to_model, :to_key, :to_param, :to_partial_path,
-    to: :record
+    to: :model
 
-  def initialize(record)
-    @record = record
+  def initialize(model)
+    @model = model
   end
 end

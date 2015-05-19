@@ -20,10 +20,6 @@ class BaseCollectionPresenter
     collection.each { |item| yield(presenter.new(item)) }
   end
 
-  def options(name: :name, id: :id)
-    map { |item| [item.public_send(name), item.public_send(id)] }
-  end
-
   private
 
   def infer_presenter

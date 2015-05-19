@@ -1,19 +1,19 @@
 class UnitPresenter < BasePresenter
-  delegate :inv_id, :unit_type, :name, :description, :user_id, :location_id, to: :record
+  delegate :inv_id, :unit_type, :name, :description, :user_id, :location_id, to: :model
   delegate :name, to: :location, prefix: true
   delegate :full_name, to: :user, prefix: true
 
   def unit_type
-    record.unit_type.text
+    model.unit_type.text
   end
 
   private
 
   def location
-    @location ||= LocationPresenter.new(record.location)
+    @location ||= LocationPresenter.new(model.location)
   end
 
   def user
-    @user ||= UserPresenter.new(record.user)
+    @user ||= UserPresenter.new(model.user)
   end
 end

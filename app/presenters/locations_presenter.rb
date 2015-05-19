@@ -1,2 +1,0 @@
-class LocationsPresenter < BaseCollectionPresenter
-end

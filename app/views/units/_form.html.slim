@@ -4,12 +4,12 @@
 
 .row
   .medium-6.columns
-    = simple_form_for(unit_form) do |f|
+    = simple_form_for(unit.to_model) do |f|
       .form-inputs
         = f.input :inv_id, required: true, autofocus: true
-        = f.input :unit_type, collection: unit_form.unit_types_options
-        = f.association :user, collection: unit_form.users_options
-        = f.association :location, collection: unit_form.locations_options
+        = f.input :unit_type
+        = f.association :user, label_method: :full_name
+        = f.association :location
         = f.input :name, required: true
         = f.input :description, as: :text, required: false
       .form-actions

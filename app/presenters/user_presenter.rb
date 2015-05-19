@@ -1,9 +1,9 @@
 class UserPresenter < BasePresenter
   # Devise compability
-  delegate :is_a?, to: :record
-  delegate :id, :email, :full_name, to: :record
+  delegate :is_a?, to: :model
+  delegate :id, :email, :full_name, to: :model
 
   def full_name_with_email
-    "#{record.full_name} (#{record.email})"
+    "#{model.full_name} (#{model.email})"
   end
 end

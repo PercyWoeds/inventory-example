@@ -1,3 +1,3 @@
 class LocationPresenter < BasePresenter
-  delegate :id, :name, to: :record
+  delegate :id, :name, to: :model
 end
