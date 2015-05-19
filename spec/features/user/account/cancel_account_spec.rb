@@ -8,7 +8,7 @@ feature 'Cancel account' do
     click_link 'Cancel my account'
 
     expect(page).to have_content('Sign in')
-    expect(page).to have_content('Bye! Your account was successfully cancelled. We hope to see you again soon.')
+    expect(page).to have_content('Bye! Your account has been successfully cancelled. We hope to see you again soon.')
 
     visit(new_user_session_path)
     sign_in(current_user.email, '123456')

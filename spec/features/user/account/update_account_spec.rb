@@ -8,7 +8,8 @@ feature 'Update account with valid data' do
   end
 
   scenario 'I submit update account form with valid data' do
-    fill_form_and_submit(:user,
+    fill_form_and_submit(
+      :user,
       :edit,
       full_name: 'New Name',
       current_password: '123456'
@@ -18,7 +19,8 @@ feature 'Update account with valid data' do
   end
 
   scenario 'Wrong current password' do
-    fill_form_and_submit(:user,
+    fill_form_and_submit(
+      :user,
       :edit,
       full_name: 'New Name',
       current_password: 'wrong'
